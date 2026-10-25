@@ -1,0 +1,6 @@
+{
+  "name": "WASLA Staff Portal - بوابة موظفي وإدارة وَصْلَة",
+  "description": "النظام البرمجي الشامل لإدارة وتفويج الفرزات اليمنية، متابعة طوابير المركبات، اعتماد الكباتن، الدفتر المالي وعمولات الوردية، ورادار الطوارئ SOS",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

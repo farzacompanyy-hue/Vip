@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-wasla: #0056b3;
+    --dark-wasla: #003b7a;
+    --emerald-wasla: #10b981;
+    --crimson-wasla: #ef4444;
+  }
+
+  body {
+    font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8fafc;
+  }
+}
+
+/* Apple Human Interface Guidelines: Squircle Geometry (Continuous Curves) */
+.apple-squircle-xl {
+  border-radius: 28px;
+}
+.apple-squircle {
+  border-radius: 22px;
+}
+.apple-squircle-sm {
+  border-radius: 16px;
+}
+.apple-squircle-xs {
+  border-radius: 12px;
+}
+
+/* Apple Frosted Glass (Glassmorphism) */
+.apple-glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -5px rgba(0, 59, 122, 0.07);
+}
+
+.apple-glass-header {
+  background: rgba(0, 59, 122, 0.88);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.apple-glass-card {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-card:hover {
+  box-shadow: 0 12px 32px -4px rgba(0, 59, 122, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* SF Symbols Style Iconography Rules */
+.sf-icon {
+  stroke-width: 1.85px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Thermal POS Printer Optimization (58mm / 80mm) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #thermal-receipt-printable,
+  #thermal-receipt-printable * {
+    visibility: visible;
+  }
+  #thermal-receipt-printable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 78mm;
+    margin: 0;
+    padding: 2mm;
+    color: #000;
+    background: #fff;
+    font-size: 11px;
+    line-height: 1.3;
+    font-family: monospace, 'Courier New', sans-serif;
+  }
+}
